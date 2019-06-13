@@ -59,9 +59,7 @@ class Tag extends PureComponent {
           aria-label={labelRemove}
           aria-labelledby={tagId}
           aria-disabled={isDisabled}
-        >
-          x
-        </button>
+        />
       </span>
     )
   }
