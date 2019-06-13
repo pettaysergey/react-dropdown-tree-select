@@ -121,22 +121,24 @@ class TreeNode extends PureComponent {
 
     return (
       <li className={liCx} style={style} id={liId} {...getDataset(dataset)} {...this.getAriaAttributes()}>
-        <Toggle isLeaf={isLeaf(_children)} expanded={expanded} id={_id} onNodeToggle={onNodeToggle} />
-        <NodeLabel
-          title={title}
-          label={label}
-          id={_id}
-          partial={partial}
-          checked={checked}
-          value={value}
-          disabled={disabled}
-          mode={mode}
-          onCheckboxChange={onCheckboxChange}
-          showPartiallySelected={showPartiallySelected}
-          readOnly={readOnly}
-          clientId={clientId}
-        />
-        <Actions actions={actions} onAction={onAction} id={_id} readOnly={readOnly} />
+        <div className="customWrapper">
+          <Toggle isLeaf={isLeaf(_children)} expanded={expanded} id={_id} onNodeToggle={onNodeToggle} />
+          <NodeLabel
+            title={title}
+            label={label}
+            id={_id}
+            partial={partial}
+            checked={checked}
+            value={value}
+            disabled={disabled}
+            mode={mode}
+            onCheckboxChange={onCheckboxChange}
+            showPartiallySelected={showPartiallySelected}
+            readOnly={readOnly}
+            clientId={clientId}
+          />
+          <Actions actions={actions} onAction={onAction} id={_id} readOnly={readOnly} />
+        </div>
       </li>
     )
   }
