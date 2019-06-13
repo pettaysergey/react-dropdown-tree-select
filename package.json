@@ -162,37 +162,5 @@
       "demo",
       "src/**/tests/**"
     ]
-  },
-  "stylelint": {
-    "extends": "stylelint-config-standard"
-  },
-  "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
-    "rules": {
-      "subject-case": [
-        2,
-        "always",
-        "sentence-case"
-      ]
-    }
-  },
-  "config": {
-    "commitizen": {
-      "path": "cz-conventional-changelog-emoji"
-    }
-  },
-  "lint-staged": {
-    "*.{js,json,css,md,ts}": [
-      "prettier --write",
-      "git add -f"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged",
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
   }
 }

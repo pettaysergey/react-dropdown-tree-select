@@ -23,13 +23,16 @@ class Checkbox extends PureComponent {
     const isDisabled = disabled || readOnly
 
     return (
-      <input
-        type="checkbox"
-        ref={refUpdater({ checked, indeterminate })}
-        onChange={onChange}
-        disabled={isDisabled}
-        {...rest}
-      />
+      <React.Fragment>
+        <input
+          type="checkbox"
+          ref={refUpdater({ checked, indeterminate })}
+          onChange={onChange}
+          disabled={isDisabled}
+          {...rest}
+        />
+        <span className="customInput" />
+      </React.Fragment>
     )
   }
 }
